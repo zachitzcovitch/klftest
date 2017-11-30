@@ -1,17 +1,6 @@
 @extends('layout')
 
 @section('styles')
-<style>
-.navbar {
-	background:#BA1200;
-}
-.navbar a {
-	color:#fff !important;
-}
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:active {
-	background:#031927;
-}
-</style>
 @endsection
 
 @section('content')
@@ -108,7 +97,6 @@
       </table>
     </div>
   </div>
-
 </div>
 
 @endsection
@@ -116,7 +104,6 @@
 @section('scripts')
 <script>
   $(function() {
-    $("#package").hide();
     $( "#region" ).change(function() {
       if(typeof $('option:selected',this).attr('data-country') !== 'undefined'){
         $("#country").val($('option:selected',this).attr('data-country'));
@@ -125,6 +112,7 @@
 
 
     // If the packaging table was in use
+    // $("#package").hide();
     // $( "#pack" ).change(function() {
     //   if($(this).val()=="packaged"){
     //     $("#package").show();
